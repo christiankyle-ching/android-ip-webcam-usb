@@ -16,7 +16,8 @@ Download a .EXE in [releases](https://github.com/christiankyle-ching/android-ip-
    - Open a `cmd` window, and type `adb devices`. It should list your device if you enabled USB debugging already.
 
 ## How to Use?
-1. Run the script (forward_ipwebcam_usb.bat).
+1. Run the script (forward_ipwebcam_usb.bat) or the .EXE file in [releases](https://github.com/christiankyle-ching/android-ip-webcam-usb/releases).
+   - **IMPORTANT:** Microsoft Defender SmartScreen will block the application due to it's potential to be used in malicious activities. I hold no liability to any damages resulting in this application (see [LICENSE](https://github.com/christiankyle-ching/android-ip-webcam-usb/blob/main/LICENSE)). However, all the code is published here publicly available for review.
 2. Open IP Webcam, and set settings shown in the window shown. Then, start server.
 3. Press any key in the script to continue.
 4. To test if it works (thru USB), you should be able to access the `IP Webcam Settings URL` shown in a browser. Use the username and password that you set in IP Webcam.
