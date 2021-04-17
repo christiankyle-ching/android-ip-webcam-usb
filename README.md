@@ -2,7 +2,7 @@
 A simple batch script to make [IP Webcam (Android)](https://play.google.com/store/apps/details?id=com.pas.webcam) use USB instead of Wi-Fi connection.
 
 ## Benefits
-1. Can be used with [OBS](https://obsproject.com/) and [OBS Virtual Cam]() to use your Android camera as a webcam with higher definition than other currently free apps.
+1. Can be used with [OBS](https://obsproject.com/) and OBS Virtual Cam to use your Android camera as a webcam with higher definition than other currently free apps.
 2. Can reduce problems when the Wi-Fi signal of the phone is too weak.
 3. Allows you to use IP Webcam even if it's not connected to any Wi-Fi access point.
 
