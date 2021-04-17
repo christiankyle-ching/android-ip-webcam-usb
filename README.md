@@ -1,7 +1,7 @@
 # Use IP Webcam thru USB instead of Wi-Fi
 A simple batch script to make [IP Webcam (Android)](https://play.google.com/store/apps/details?id=com.pas.webcam) use USB instead of Wi-Fi connection.
 
-[**Download .bat**](https://raw.githubusercontent.com/christiankyle-ching/android-ip-webcam-usb/main/forward_ipwebcam_usb.bat) (_Right Click -> Save link as..._)
+Download a .EXE in [releases](https://github.com/christiankyle-ching/android-ip-webcam-usb/releases).
 
 ## Benefits
 1. Can be used with [OBS](https://obsproject.com/) and OBS Virtual Cam to use your Android camera as a webcam with higher definition than other currently free apps.
@@ -43,6 +43,8 @@ For example, the following will forward IP Webcam's port `5000` to a port in you
 ```shell
 forward_ipwebcam_usb 5000 6000
 ```
+
+[**Download .bat**](https://raw.githubusercontent.com/christiankyle-ching/android-ip-webcam-usb/main/forward_ipwebcam_usb.bat) (_Right Click -> Save link as..._)
 
 ## Notes
 

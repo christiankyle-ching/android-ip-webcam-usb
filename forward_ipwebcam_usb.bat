@@ -11,17 +11,19 @@ where adb >nul 2>nul
 IF ERRORLEVEL 1 GOTO no_adb
 
 @REM Check if only one device is connected
-md %tempDir% && cd %tempDir%
+md %tempDir%
+attrib %tempDir% +H /D
+cd %tempDir%
 
 SET /A device_count=0
 adb devices > out_adb_devices.txt
 findstr /r .*device$ out_adb_devices.txt > out_findstr_devices.txt
 FOR /F %%a IN ('TYPE out_findstr_devices.txt ^| FIND "" /v /c') DO SET /A device_count=%%a
 
+cd .. && rmdir /s /q %tempDir%
+
 IF %device_count%==0 GOTO no_devices
 IF %device_count% GTR 1 GOTO too_many_devices
-
-cd .. && rmdir /s /q %tempDir%
 
 @REM Default Values
 SET /A port_phone = 8080
@@ -31,8 +33,9 @@ SET /A port_local = 7000
 IF NOT [%1]==[] SET /A port_phone = %1
 IF NOT [%2]==[] SET /A port_local = %2
 
-echo *** USE IP WEBCAM THRU USB INSTEAD OF WIFI ***
+cls
 echo.
+echo *** USE IP WEBCAM THRU USB INSTEAD OF WIFI ***
 echo.
 echo Please start the server in your phone's IP Webcam with the following settings...
 echo.
@@ -52,13 +55,12 @@ pause
 cls
 
 echo.
-echo.
 echo Attempting to forward to USB...
-adb forward tcp:%port_local% tcp:%port_phone%
+adb forward tcp:%port_local% tcp:%port_phone% >nul
 
 echo.
-echo.
 echo Now forwarding IP Webcam server to your localhost:
+echo.
 echo.
 echo IP Webcam Settings URL (open in browser): http://localhost:%port_local%
 echo.
